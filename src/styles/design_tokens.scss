@@ -1,0 +1,34 @@
+@mixin text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: normal;
+}
+
+@mixin text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+}
+
+@mixin text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+@mixin text-2xl-bold {
+  @include text-2xl;
+  text-weight: bold;
+}
+
+@mixin text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: normal;
+}
+
+@mixin text-6xl {
+  font-size: 3.75rem;
+  line-height: 1rem;
+  font-weight: normal;
+}

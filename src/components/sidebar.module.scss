@@ -1,0 +1,57 @@
+@import "../styles/design_tokens.scss";
+
+$paddingVertical: 3.5rem;
+$itemHeight: 3.5rem;
+$paddingHorizontal: 2rem;
+
+.container {
+  margin: 0;
+  padding: 0;
+  padding-top: $paddingVertical;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-shadow: 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.NavLinks_wrapper {
+  margin-top: $paddingVertical;
+}
+
+.NavLink_container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.NavLink_container a {
+  @include text-base;
+  box-sizing: border-box;
+  color: var(--paragraph);
+  text-decoration: none;
+  width: 100%;
+  height: $itemHeight;
+  padding-left: $paddingHorizontal;
+  display: flex;
+  align-items: center;
+}
+
+.NavLink_container:hover,
+.NavLink_active {
+  background-color: var(--nav-highlight);
+}
+
+.NavImage_container {
+  box-sizing: border-box;
+  width: 100%;
+  height: $itemHeight;
+  display: flex;
+  align-items: center;
+  padding-left: $paddingHorizontal;
+}
+
+.NavImage_wrapper {
+  position: relative;
+  width: 10rem;
+  height: 1.875rem;
+}

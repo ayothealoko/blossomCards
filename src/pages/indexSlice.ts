@@ -1,0 +1,138 @@
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { HabitTrackerProps } from "../components/habitTracker";
+
+export interface IndexState {
+  habitTracker: HabitTrackerProps;
+}
+
+const initialState: IndexState = {
+  habitTracker: {
+    streakDays: 0,
+    grid: [
+      [
+        { isActive: true },
+        { isActive: true, month: 1 },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true, month: 2 },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true, month: 3 },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+      [
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+        { isActive: true },
+      ],
+    ],
+  },
+};
+
+export const indexSlice = createSlice({
+  name: "index",
+  initialState,
+  reducers: {
+    increment: (state) => {},
+  },
+});
+
+export const { increment } = indexSlice.actions;
+export default indexSlice.reducer;

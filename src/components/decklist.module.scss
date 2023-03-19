@@ -1,0 +1,16 @@
+@import "../styles/design_tokens.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container a,
+.container a:visited {
+  @include text-base;
+  padding: 1.25rem 0;
+  color: var(--link);
+}
+
+.container a:hover {
+  font-weight: bold;
+}

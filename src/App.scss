@@ -1,0 +1,33 @@
+/*  TODO: Make fonts downloaded */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: #FBFAF9l;
+  --headline: #545e75;
+  --paragraph: #545e75;
+  --button-text: #fbfaf9;
+  --button: #e25f5f;
+  --button2: #f1edea;
+  --highlight: #3f826d;
+  --gray1: #dee1e8;
+  --gray2: #afb6c5;
+  --link: #224aa7;
+  --red-higlight: #cfa5a5;
+  --green-highlight: #b0cfa5;
+  --nav-highlight: #f1edea;
+}

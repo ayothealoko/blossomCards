@@ -1,0 +1,62 @@
+@import "../styles/design_tokens.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  color: var(--paragraph);
+  flex-wrap: wrap;
+  @include text-xs;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.streakCount {
+  /* custom font settings */
+  font-size: 4.375rem;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  width: 17rem;
+}
+
+.habitTrackerWeekdays {
+  display: flex;
+  flex-direction: column;
+  gap: 0.615rem;
+}
+
+.dayBox {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--gray1);
+}
+
+.dayBoxMonthContainer {
+  position: relative;
+}
+
+.dayBoxMonthText {
+  position: absolute;
+  // 8 (space) + 16 (box height)
+  bottom: 1.5rem;
+}
+
+.dayBoxActive {
+  background-color: var(--highlight);
+}
+
+.dayRowContainer {
+  display: flex;
+  gap: 0.615rem;
+  align-items: flex-end;
+}
+
+.daysGridContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.615rem;
+}

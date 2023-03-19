@@ -1,0 +1,71 @@
+@import "../styles/design_tokens.scss";
+
+.container {
+  @include text-base;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1fr 3rem;
+  column-gap: 0;
+  row-gap: 1rem;
+  color: var(--paragraph);
+}
+
+.input {
+  @include text-base;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: solid var(--paragraph) 1px;
+  outline: none;
+  color: var(--paragraph);
+}
+
+.input:focus {
+  border-bottom: solid var(--button) 1px;
+}
+
+.input:nth-child(odd) {
+  margin-left: 1rem;
+}
+
+.input:nth-child(even) {
+  margin-right: 1rem;
+}
+
+.term,
+.def {
+  @include text-2xl-bold;
+  color: var(--gray1);
+  font-weight: bold;
+}
+
+.term {
+  grid-column: 2 / span 1;
+}
+
+.def {
+  grid-column: 3 / span 1;
+  padding-left: 1rem;
+}
+
+.container span:nth-child(3) {
+  grid-column: 1 / span 1;
+}
+
+.number {
+}
+
+.cancel {
+  width: 2rem;
+  margin-left: 1rem;
+  background: transparent url("../assets/cancel.svg") no-repeat center;
+  border: none;
+}
+
+.cancel:hover {
+  transform: rotate(90deg);
+  transition: transform 0.1s;
+}
+
+.buttonTray {
+  display: flex;
+  gap: 2rem;
+}

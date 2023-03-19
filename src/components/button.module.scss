@@ -1,0 +1,24 @@
+@import "../styles/design_tokens.scss";
+
+.container {
+  @include text-base;
+  // (button height- text height)/2
+  // (56-24)/2 for top & padding
+  padding: 1rem 5rem;
+  border: none;
+  display: inline;
+}
+
+.container:hover {
+  filter: brightness(96%);
+}
+
+.variant1 {
+  color: var(--button-text);
+  background-color: var(--button);
+}
+
+.variant2 {
+  color: var(--paragraph);
+  background-color: var(--button2);
+}
