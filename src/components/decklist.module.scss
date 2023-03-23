@@ -14,3 +14,83 @@
 .container a:hover {
   font-weight: bold;
 }
+
+.row {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &:hover {
+    background-color: var(--nav-highlight);
+  }
+}
+
+.deckButton {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.deckButton:first-child {
+  &:hover {
+    transform: rotate(30deg);
+    transition: transform 0.1s;
+  }
+
+  &:active {
+    background-color: var(--background);
+    filter: brightness(45%);
+  }
+}
+
+.deckButton:nth-child(2) {
+  border: solid transparent 2px;
+
+  & img:hover {
+    transform: rotate(90deg);
+    transition: transform 0.1s;
+  }
+
+  &:active {
+    border-color: var(--paragraph);
+  }
+}
+
+.edit {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.55rem 2rem 0.35rem;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: var(--nav-highlight);
+
+  & input {
+    width: 80%;
+    height: 1.6rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px var(--paragraph);
+    color: var(--paragraph);
+    outline: 0;
+  }
+
+  & button {
+    background-color: var(--button);
+    color: var(--button-text);
+    padding: 0.5rem 1rem;
+    border: none;
+
+    &:hover {
+      filter: brightness(96%);
+    }
+
+    &:active {
+      filter: brightness(90%);
+    }
+  }
+}
