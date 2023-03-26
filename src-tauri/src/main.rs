@@ -12,7 +12,6 @@ use lazy_static::lazy_static;
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 async fn create_deck_cmd(deck: String) -> i64 {
-    println! {"--------------------------------HELLO"}
     let conn_op = &DB.lock().await.conn;
     let conn = match conn_op {
         Some(v) => v,

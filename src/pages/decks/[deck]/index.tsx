@@ -12,7 +12,6 @@ function Index() {
       <div className={styles.buttonTray}>
         <Button text="Start Studying" variant={1} />
         <Button text="Edit Deck" variant={2} />
-        <Button text="Show All Cards" variant={2} />
       </div>
       <PracticedCards learning={[{ term: "hello", definition: "Hallo" }]} />
     </>

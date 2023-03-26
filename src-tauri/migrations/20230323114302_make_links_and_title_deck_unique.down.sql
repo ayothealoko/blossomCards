@@ -4,7 +4,7 @@ CREATE TABLE decktmp (
        title TEXT NOT NULL,
        link TEXT NOT NULL,
        date_created INTEGER,
-       date_modified INTEGER,
+       date_modified INTEGER
 );
 
 INSERT INTO decktmp (decks_id, title, link,date_created,date_modified)

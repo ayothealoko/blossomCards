@@ -4,7 +4,7 @@ import styles from "./button.module.scss";
 interface ButtonProps {
   text: string;
   variant: 1 | 2;
-  onClicki?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 function Button({ text, variant, onClick }: ButtonProps) {

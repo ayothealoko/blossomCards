@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import DeckList from "../components/DeckList";
-import MainH1 from "../components/mainH1";
-import { useAppDispatch } from "../store/dispatch";
-import type { RootState } from "../store/store";
+import DeckList from "../../components/DeckList";
+import MainH1 from "../../components/mainH1";
+import { useAppDispatch } from "../../store/dispatch";
+import type { RootState } from "../../store/store";
 import {
   createDecksCmd,
   deleteDecksCmd,
   showDecksCmd,
   updateDecksCmd,
-} from "../slices/decksSlice";
+} from "../../slices/decksSlice";
 
 function Decks() {
   const decks = useSelector((state: RootState) => state.decks.deckList);
