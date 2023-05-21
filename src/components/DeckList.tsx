@@ -140,7 +140,9 @@ function DeckRowEdit({
     };
 
     setEdit(null);
-    dispatch(editAction(edit));
+    if (inputTitle !== "") {
+      dispatch(editAction(edit));
+    }
   };
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -152,7 +154,9 @@ function DeckRowEdit({
       };
 
       setEdit(null);
-      dispatch(editAction(edit));
+      if (inputTitle !== "") {
+        dispatch(editAction(edit));
+      }
     }
   };
 
@@ -189,13 +193,17 @@ function DeckRowCreate({ createAction, setIsAddDeck }: DeckRowCreateProps) {
   // TODO sanitize user inputs
   const handleClick = (_: React.MouseEvent<HTMLButtonElement>): void => {
     setIsAddDeck(false);
-    dispatch(createAction(inputTitle.trim()));
+    if (inputTitle !== "") {
+      dispatch(createAction(inputTitle.trim()));
+    }
   };
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === "Enter") {
       setIsAddDeck(false);
-      dispatch(createAction(inputTitle.trim()));
+      if (inputTitle !== "") {
+        dispatch(createAction(inputTitle.trim()));
+      }
     }
   };
   return (

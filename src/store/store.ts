@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import decksReducer from "../slices/decksSlice";
+import cardsReducer from "../slices/cardSlice";
 import { indexSlice } from "../slices/indexSlice";
 // ...
 
@@ -7,6 +8,7 @@ export const store = configureStore({
   reducer: {
     index: indexSlice.reducer,
     decks: decksReducer,
+    cards: cardsReducer,
   },
 });
 

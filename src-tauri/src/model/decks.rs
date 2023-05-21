@@ -32,7 +32,6 @@ VALUES ( ?1, ?2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP );
 pub async fn show_deck(pool: &SqlitePool) -> Vec<Deck> {
     let recs = sqlx::query!(
         r#"
-
 SELECT decks_id, title, link, date_created
 FROM decks
 ORDER BY date_created ASC;
@@ -48,7 +47,7 @@ ORDER BY date_created ASC;
         decks.push(Deck {
             decks_id: row.decks_id,
             title: row.title,
-            link: row.link,
+            link: Some(row.link),
         });
     }
 
@@ -96,5 +95,27 @@ WHERE decks_id = $1;
     match id {
         Ok(v) => v.last_insert_rowid(),
         Err(_) => -1,
+    }
+}
+
+pub async fn get_decks_id(pool: &SqlitePool, deck_name: String) -> i64 {
+    let recs = sqlx::query!(
+        r#"
+SELECT decks_id
+FROM decks
+WHERE title = ?1
+ORDER BY date_created ASC;
+        "#,
+        deck_name
+    )
+    .fetch_one(pool)
+    .await
+    .unwrap();
+
+    let id = recs.decks_id;
+
+    match id {
+        Some(v) => v,
+        None => -1,
     }
 }

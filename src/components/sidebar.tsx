@@ -75,7 +75,7 @@ function NavImage({ imgUrl }: NavImageProps) {
   return (
     <div className={styles.NavImage_container}>
       <div className={styles.NavImage_wrapper}>
-        <Image src={imgUrl} alt="logo" layout="fill" objectFit="contain" />
+        <Image src={imgUrl} alt="logo" fill />
       </div>
     </div>
   );

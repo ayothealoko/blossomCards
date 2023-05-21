@@ -2,8 +2,10 @@ import Button from "./button";
 import styles from "./inputCards.module.scss";
 
 export interface InputCardsProps {
-  cards: InputRowProps[];
+  cards: CardPropType[];
 }
+
+type CardPropType = Omit<InputRowProps, "num">;
 
 function InputCards({ cards }: InputCardsProps) {
   return (
@@ -12,7 +14,7 @@ function InputCards({ cards }: InputCardsProps) {
         <span className={styles.term}>Term</span>
         <span className={styles.def}>Definition</span>
         {cards.map((x, i) => {
-          return <InputRow key={i} {...x} />;
+          return <InputRow key={i} {...x} num={i + 1} />;
         })}
       </div>
       <div className={styles.buttonTray}>
@@ -23,7 +25,7 @@ function InputCards({ cards }: InputCardsProps) {
   );
 }
 
-interface InputRowProps {
+export interface InputRowProps {
   num: number;
   front: string;
   back: string;

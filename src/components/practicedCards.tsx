@@ -1,4 +1,5 @@
 import styles from "./practicedCards.module.scss";
+import React from "react";
 
 interface PracticedCardsProps {
   learning?: TemplateProps["cards"];
@@ -8,8 +9,8 @@ interface PracticedCardsProps {
 function PracticedCards({ learning, newCards }: PracticedCardsProps) {
   return (
     <>
-      {learning ? <Template cards={learning} title="Learing" /> : null}
-      {newCards ? <Template cards={newCards} title="new Cards" /> : null}
+      {learning ? <Template cards={learning} title="Learning" /> : null}
+      {newCards ? <Template cards={newCards} title="New cards" /> : null}
     </>
   );
 }
@@ -17,8 +18,8 @@ function PracticedCards({ learning, newCards }: PracticedCardsProps) {
 interface TemplateProps {
   title: string;
   cards: {
-    term: string;
-    definition: string;
+    front: string;
+    back: string;
   }[];
 }
 
@@ -29,10 +30,10 @@ function Template({ title, cards }: TemplateProps) {
       <div className={styles.templateGrid}>
         {cards.map((x, i) => {
           return (
-            <>
-              <span key={`${i}-1`}>{x.term}</span>
-              <span key={`${i}-2`}>{x.definition}</span>
-            </>
+            <React.Fragment key={i}>
+              <span key={`${i}-1`}>{x.front}</span>
+              <span key={`${i}-2`}>{x.back}</span>
+            </React.Fragment>
           );
         })}
       </div>
